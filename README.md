@@ -61,6 +61,22 @@ The application will be available at `http://localhost:5001`
 - Database: SQLite (users.db)
 - Debug mode: Enabled by default (disable in production)
 
+## Default Login Credentials
+
+There are two default user accounts:
+
+1. Administrator Account:
+   - Username: `admin`
+   - Password: `admin123`
+   - Has full access to all features including user management
+
+2. Regular User Account:
+   - Username: `user`
+   - Password: `user123`
+   - Can manage assigned VPS instances
+
+**Note:** It's recommended to change these passwords after first login for security purposes.
+
 ## Project Structure
 
 ```
