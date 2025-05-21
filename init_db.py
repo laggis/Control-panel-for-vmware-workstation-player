@@ -9,12 +9,12 @@ with app.app_context():
 
     # Create admin user
     admin = User(username='admin', is_admin=True)
-    admin.set_password('Darkandd94!')
+    admin.set_password('admin')
     db.session.add(admin)
 
     # Create regular user
     user = User(username='user')
-    user.set_password('Darkandd94!')
+    user.set_password('user')
     db.session.add(user)
 
     # Create sample VPS
