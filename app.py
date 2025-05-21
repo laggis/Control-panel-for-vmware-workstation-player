@@ -73,8 +73,16 @@ def vmware_control(action, vmx_path):
 
 def get_vm_status(vmx_path):
     try:
+        # Full path to vmrun executable
+        vmrun_path = r'C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe'
+        
+        # Check if vmrun exists
+        if not os.path.exists(vmrun_path):
+            app.logger.error(f"VMware vmrun not found at: {vmrun_path}")
+            return "unknown"
+            
         # Use vmrun list to get list of running VMs
-        result = subprocess.run(['vmrun', 'list'], capture_output=True, text=True)
+        result = subprocess.run([vmrun_path, 'list'], capture_output=True, text=True)
         running_vms = result.stdout.splitlines()
         
         # Skip the first line which is just a header
