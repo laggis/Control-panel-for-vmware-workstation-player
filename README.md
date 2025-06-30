@@ -34,7 +34,7 @@ A web-based control panel for managing VMware virtual machines with a modern, us
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/vmware-control-panel.git
+git clone https://github.com/laggis/vmware-control-panel.git
 cd vmware-control-panel
 ```
 
